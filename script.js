@@ -1,5 +1,5 @@
 // Ganti dengan URL spreadsheet Anda
-const SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/.../pub?output=csv';
+const SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/1tHgRRM9Zvn6nTohsD9QKT_phLR6S-KIbeWM8Ocjev50/pub?output=csv';
 
 let products = [];
 let cart = [];
@@ -146,4 +146,5 @@ function checkout() {
 document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
     loadCart();
+
 });
