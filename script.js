@@ -7,13 +7,14 @@ let cart = [];
 
 // Ambil data dari spreadsheet
 async function fetchProducts() {
-    try {
-        const response = await fetch(SPREADSHEET_URL);
-        const data = await response.text();
-        
-        // Parse CSV
-        const rows = data.split('\n').slice(1); // Skip header
-        products = rows.map(row => {
+  try {
+    const response = await fetch(SPREADSHEET_URL);
+    const data = await response.json();
+    const csvContent = data.contents;
+    
+    // Parse CSV
+    const rows = csvContent.split('\n').slice(1);
+            products = rows.map(row => {
             const [id, nama_produk, harga, stok, deskripsi, gambar_url] = row.split(',');
             return {
                 id,
@@ -149,4 +150,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loadCart();
 
 });
+
 
