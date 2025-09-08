@@ -1,5 +1,6 @@
 // Ganti dengan URL spreadsheet Anda
-const SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/1tHgRRM9Zvn6nTohsD9QKT_phLR6S-KIbeWM8Ocjev50/pub?output=csv';
+const SPREADSHEET_URL = 'https://api.allorigins.win/get?url=' + 
+  encodeURIComponent('https://docs.google.com/spreadsheets/d/1tHgRRM9Zvn6nTohsD9QKT_phLR6S-KIbeWM8Ocjev50/pub?output=csv');
 
 let products = [];
 let cart = [];
@@ -148,3 +149,4 @@ document.addEventListener('DOMContentLoaded', () => {
     loadCart();
 
 });
+
